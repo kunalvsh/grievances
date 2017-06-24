@@ -8,6 +8,15 @@
 </head>
 <body>
 <div class="title">
+Next
+
+<br><br>
+Zipcode:
+<%= zipcode %>
+<br><br>
+
+<br><hr><br>
+
 Causes
 <% for(var i=0; i<causes.length; i++) {%>
    <li><%= causes[i] %></li>
@@ -27,7 +36,14 @@ Causes
     </ul>
     <div class="tab-content clearfix">
         <div class="tab-pane active" id="1a">
-            <h3>Will be adding news from NY Times at http://developer.nytimes.com/article_search_v2.json#/Documentation/GET/articlesearch.json</h3>
+            <% for(var i=0; i<newsArticles.length; i++) {%>
+               <li>
+                    <a target="_blank" href=<%= newsArticles[i].web_url %>><%= newsArticles[i].headline.main %></a>
+                    <p>
+                        <%= newsArticles[i].snippet %>
+                    </p>
+               </li>
+            <% } %>
         </div>
         <div class="tab-pane" id="2a">
           <% for(var i=0; i<localLegislators.length; i++) {%>

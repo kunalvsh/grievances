@@ -25,25 +25,38 @@ module.exports = function(app, io) {
         if (typeof(req.query.causes) == 'string') {
             req.query.causes = [req.query.causes];
         }
+        var causes = req.query.causes;
         var zipcode = req.query.zipcode;
-        request(`https://congress.api.sunlightfoundation.com/legislators/locate?zip=${zipcode}`, function (error,
+        request('https://congress.api.sunlightfoundation.com/legislators/locate?zip=' + zipcode, function (error,
                                                                                                            response,
                                                                                                            body) {
-          if (error) {
-            console.log('error:', error); // Print the error if one occurred
-            res.redirect('/');
-            // add error message here later
-          }
-          var legislatorsData = JSON.parse(body).results;
-          var localLegislators = [];
-          for (i in legislatorsData) {
-            localLegislators.push(legislatorsData[i]);
-          }
-          res.render('next', {
-            zipcode: zipcode,
-            causes: req.query.causes,
-            localLegislators: localLegislators
-          });
+            if (error) {
+                console.log('error:', error); // Print the error if one occurred
+                res.redirect('/');
+                // add error message here later
+            }
+
+            var legislatorsData = JSON.parse(body).results;
+            var localLegislators = [];
+            for (i in legislatorsData) {
+                localLegislators.push(legislatorsData[i]);
+              }
+            var newsUrl = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+            newsUrl += '?api-key=d02753ccca9140b08beb5104437d0245&sort=newest&q=' + causes[0];
+            request(newsUrl, function (error2, response2, body2) {
+                if (error) {
+                    console.log('error:', error); // Print the error if one occurred
+                    res.redirect('/');
+                    // add error message here later
+                }
+                var newsData = JSON.parse(body2);
+                res.render('next', {
+                    zipcode: zipcode,
+                    causes: causes,
+                    localLegislators: localLegislators,
+                    newsArticles: newsData.response.docs
+                });
+            });
         });
     });
 }
