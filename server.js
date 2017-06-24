@@ -14,7 +14,6 @@ app.configure(function() {
     app.set('port', process.env.PORT || 3000);
     app.set('views', __dirname + '/app/views/pages');
     app.set('view engine', 'ejs');
-    app.use(express.favicon(path.join(__dirname, 'public','images','favicon.ico','favicon-96x96.png'))); 
     app.use(express.cookieParser());
     app.use(express.cookieSession({
         secret: 'secret'
