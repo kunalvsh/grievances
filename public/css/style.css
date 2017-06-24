@@ -1,3 +1,22 @@
-.test {
+.title {
     font-size: 50px;
+    text-align: center;
+}
+
+.list {
+	list-style: none;
+}
+
+.home-action {
+    bottom: 5px;
+    right: 5px;
+    position: absolute;
+}
+
+.right {
+	text-align: right;
+}
+
+.causes {
+	height: 1000px !important ;
 }

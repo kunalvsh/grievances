@@ -1,10 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <script async src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet"  href="css/style.css" />
 </head>
 <body>
-<div class="test">
-Welcome initial page
+<div class="title">
+HOMEPAGE
+
+<br>
+
+<form action="/submit_home" method="get">
+  <div class="right">
+    Zip code: <input type="text" name="zipcode">
+  </div>
+  <br>
+
+  <div>
+    Choose 3-5
+  </div>
+
+  <div>
+  <select multiple class="causes">
+    <option>Reproductive Rights</option>
+    <option>Coptionmate Change</option>
+    <option>Immigration Reform</option>
+    <option>LGBTQ Rights</option>
+    <option>Healthcare</option>
+    <option>Voting Rights</option>
+    <option>Racial Justice</option>
+    <option>Islamophobia</option>
+    <option>Campaign Finance Reform</option>
+    <option>Education</option>
+    <option>Homelessness</option>
+    <option>Women's Rights</option>
+    <option>Agriculture Pooptioncy</option>
+    <option>Finance Reform</option>
+    <option>Middle Eastern Relations</option>
+    <option>International Relations</option>
+  </select>
+  </div>
+
+  <div class="home-action">
+    <input id="joinRoom" type="submit" value="Go to your custom page." formaction="/submit_home">
+  </div>
+</form>
+
 </body>
 </html>

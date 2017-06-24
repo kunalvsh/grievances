@@ -18,4 +18,13 @@ module.exports = function(app, io) {
 	app.get('/', function(req, res) {
 		res.render('home');
 	});
+
+    app.get('/next', function(req, res) {
+        res.render('next');
+    });
+
+    app.get('/submit_home', function(req, res) {
+        console.log(req.query);
+        res.render('next');
+    });
 }
