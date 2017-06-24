@@ -8,34 +8,6 @@
 </head>
 <body>
 <div class="title">
-Next
-
-<br><br>
-Zipcode:
-<%= zipcode %>
-<br><br>
-
-Legislators
-<% for(var i=0; i<localLegislators.length; i++) {%>
-  <br><hr><br>
-  <p>
-    <% if (localLegislators[i].chamber == 'house') { %>
-      District <%=localLegislators[i].district%>
-    <% } %>
-    <a href=<%= localLegislators[i].website %>>
-      <%= localLegislators[i].title %> <%= localLegislators[i].first_name %> <%= localLegislators[i].last_name %></a>
-      (<%= localLegislators[i].party %>) (<%= localLegislators[i].chamber %>)
-    <br><br>
-    Email: <a href=mailto:<%=localLegislators[i].oc_email%>><%= localLegislators[i].oc_email %></a>
-    <br><br>
-    Phone: <%= localLegislators[i].phone %>
-    <br><br>
-    Twitter: <%= localLegislators[i].twitter_id %>
-    <br><br>
-    In term until <%= localLegislators[i].term_end %>
-  </p>
-<% } %>
-<br><hr><br>
 Causes
 <% for(var i=0; i<causes.length; i++) {%>
    <li><%= causes[i] %></li>
@@ -58,7 +30,25 @@ Causes
             <h3>Will be adding news from NY Times at http://developer.nytimes.com/article_search_v2.json#/Documentation/GET/articlesearch.json</h3>
         </div>
         <div class="tab-pane" id="2a">
-            <h3>Add legislators / bill info here</h3>
+          <% for(var i=0; i<localLegislators.length; i++) {%>
+            <br><hr>
+            <p class="legislators">
+              <% if (localLegislators[i].chamber == 'house') { %>
+                District <%=localLegislators[i].district%>
+              <% } %>
+              <a href=<%= localLegislators[i].website %>>
+                <%= localLegislators[i].title %> <%= localLegislators[i].first_name %> <%= localLegislators[i].last_name %></a>
+                (<%= localLegislators[i].party %>) (<%= localLegislators[i].chamber %>)
+              <br><br>
+              Email: <a href=mailto:<%=localLegislators[i].oc_email%>><%= localLegislators[i].oc_email %></a>
+              <br><br>
+              Phone: <%= localLegislators[i].phone %>
+              <br><br>
+              Twitter: <%= localLegislators[i].twitter_id %>
+              <br><br>
+              In term until <%= localLegislators[i].term_end %>
+            </p>
+          <% } %>
         </div>
         <div class="tab-pane" id="3a">
             <h3>DO SOMETHING !!</h3>
