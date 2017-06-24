@@ -46,25 +46,32 @@ Causes
             <% } %>
         </div>
         <div class="tab-pane" id="2a">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>District No.</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Twitter</th>
+                <th>Term End</th>
+              </tr>
+            </thead>
+            <tbody>
           <% for(var i=0; i<localLegislators.length; i++) {%>
-            <br><hr>
-            <p class="legislators">
-              <% if (localLegislators[i].chamber == 'house') { %>
-                District <%=localLegislators[i].district%>
-              <% } %>
-              <a href=<%= localLegislators[i].website %>>
+            <tr>
+              <td><%= localLegislators[i].district %></td>
+               <td><a href=<%= localLegislators[i].website %>>
                 <%= localLegislators[i].title %> <%= localLegislators[i].first_name %> <%= localLegislators[i].last_name %></a>
-                (<%= localLegislators[i].party %>) (<%= localLegislators[i].chamber %>)
-              <br><br>
-              Email: <a href=mailto:<%=localLegislators[i].oc_email%>><%= localLegislators[i].oc_email %></a>
-              <br><br>
-              Phone: <%= localLegislators[i].phone %>
-              <br><br>
-              Twitter: <%= localLegislators[i].twitter_id %>
-              <br><br>
-              In term until <%= localLegislators[i].term_end %>
-            </p>
+                (<%= localLegislators[i].party %>) (<%= localLegislators[i].chamber %>)</td>
+              <td><a target='_blank' href=mailto:<%=localLegislators[i].oc_email%>><%= localLegislators[i].oc_email %></a></td>
+              <td><%= localLegislators[i].phone %></td>
+              <td><a target='_blank' href='https://twitter.com/<%= localLegislators[i].twitter_id %>'><%= localLegislators[i].twitter_id %></a></td>
+              <td><%= localLegislators[i].term_end %></td>
+            </tr>
           <% } %>
+            </tbody>
+        </table>
         </div>
         <div class="tab-pane" id="3a">
             <h3>DO SOMETHING !!</h3>
