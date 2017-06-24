@@ -15,9 +15,42 @@ Zipcode:
 <%= zipcode %>
 <br><br>
 
+Legislators
+<% for(var i=0; i<localLegislators.length; i++) {%>
+  <br><hr><br>
+  <p>
+    <% if (localLegislators[i].chamber == 'house') { %>
+      District <%=localLegislators[i].district%>
+    <% } %>
+    <a href=<%= localLegislators[i].website %>>
+      <%= localLegislators[i].title %> <%= localLegislators[i].first_name %> <%= localLegislators[i].last_name %></a>
+      (<%= localLegislators[i].party %>) (<%= localLegislators[i].chamber %>)
+    <br><br>
+    Email: <a href=mailto:<%=localLegislators[i].oc_email%>><%= localLegislators[i].oc_email %></a>
+    <br><br>
+    Phone: <%= localLegislators[i].phone %>
+    <br><br>
+    Twitter: <%= localLegislators[i].twitter_id %>
+    <br><br>
+    In term until <%= localLegislators[i].term_end %>
+  </p>
+<% } %>
+<br><hr><br>
 Causes
 <% for(var i=0; i<causes.length; i++) {%>
    <li><%= causes[i] %></li>
 <% } %>
 </body>
 </html>
+
+<!-- // chamber
+// first_name
+// last_name
+// district
+// website
+// twitter_id
+// oc_email
+// phone
+// party
+// title
+// term_end -->

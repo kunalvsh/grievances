@@ -34,12 +34,29 @@ module.exports = function(app, io) {
             res.redirect('/');
             // add error message here later
           }
-          var legislatorsData = JSON.parse(body);
+          var legislatorsData = JSON.parse(body).results;
+          var localLegislators = [];
+          for (i in legislatorsData) {
+            localLegislators.push(legislatorsData[i]);
+          }
           res.render('next', {
             zipcode: zipcode,
             causes: req.query.causes,
-            legislators: legislatorsData
+            localLegislators: localLegislators
           });
         });
     });
 }
+
+// chamber
+// first_name
+// last_name
+// district
+// website
+// state
+// twitter_id
+// oc_email
+// phone
+// party
+// title
+// term_end
