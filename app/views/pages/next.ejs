@@ -7,20 +7,20 @@
   <link rel="stylesheet"  href="css/style.css" />
 </head>
 <body>
-<div class="title">
-Next
+<div class="title"> Your Custom Page </div>
 
-<br><br>
-Zipcode:
-<%= zipcode %>
-<br><br>
+<div class="settings">
+    <br>
+    Zipcode:
+    <%= zipcode %>
+    <br>
+    Causes
+    <% for(var i=0; i<causes.length; i++) {%>
+       <li><%= causes[i] %></li>
+    <% } %>
+</div>
 
-<br><hr><br>
-
-Causes
-<% for(var i=0; i<causes.length; i++) {%>
-   <li><%= causes[i] %></li>
-<% } %>
+<hr>
 
 <div id="exTab1" class="container">
     <ul  class="nav nav-pills">
@@ -47,7 +47,7 @@ Causes
         </div>
         <div class="tab-pane" id="2a">
           <% for(var i=0; i<localLegislators.length; i++) {%>
-            <br><hr>
+            <hr>
             <p class="legislators">
               <% if (localLegislators[i].chamber == 'house') { %>
                 District <%=localLegislators[i].district%>
@@ -55,13 +55,13 @@ Causes
               <a href=<%= localLegislators[i].website %>>
                 <%= localLegislators[i].title %> <%= localLegislators[i].first_name %> <%= localLegislators[i].last_name %></a>
                 (<%= localLegislators[i].party %>) (<%= localLegislators[i].chamber %>)
-              <br><br>
+              <br>
               Email: <a href=mailto:<%=localLegislators[i].oc_email%>><%= localLegislators[i].oc_email %></a>
-              <br><br>
+              <br>
               Phone: <%= localLegislators[i].phone %>
-              <br><br>
+              <br>
               Twitter: <%= localLegislators[i].twitter_id %>
-              <br><br>
+              <br>
               In term until <%= localLegislators[i].term_end %>
             </p>
           <% } %>
