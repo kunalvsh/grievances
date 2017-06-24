@@ -8,5 +8,15 @@
 <body>
 <div class="title">
 Next
+
+<br><br>
+Zipcode:
+<%= zipcode %>
+<br><br>
+
+Causes
+<% for(var i=0; i<causes.length; i++) {%>
+   <li><%= causes[i] %></li>
+<% } %>
 </body>
 </html>

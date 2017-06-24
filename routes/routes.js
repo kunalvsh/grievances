@@ -19,12 +19,13 @@ module.exports = function(app, io) {
 		res.render('home');
 	});
 
-    app.get('/next', function(req, res) {
-        res.render('next');
-    });
-
     app.get('/submit_home', function(req, res) {
-        console.log(req.query);
-        res.render('next');
+        if (typeof(req.query.causes) == 'string') {
+            req.query.causes = [req.query.causes];
+        }
+        res.render('next', {
+            zipcode: req.query.zipcode,
+            causes: req.query.causes
+        });
     });
 }
