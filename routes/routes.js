@@ -1,3 +1,5 @@
+var request = require('request');
+
 module.exports = function(app, io) {
 
     app.use(function(req, res, next) {
@@ -23,9 +25,21 @@ module.exports = function(app, io) {
         if (typeof(req.query.causes) == 'string') {
             req.query.causes = [req.query.causes];
         }
-        res.render('next', {
-            zipcode: req.query.zipcode,
-            causes: req.query.causes
+        var zipcode = req.query.zipcode;
+        request(`https://congress.api.sunlightfoundation.com/legislators/locate?zip=${zipcode}`, function (error,
+                                                                                                           response,
+                                                                                                           body) {
+          if (error) {
+            console.log('error:', error); // Print the error if one occurred
+            res.redirect('/');
+            // add error message here later
+          }
+          var legislatorsData = JSON.parse(body);
+          res.render('next', {
+            zipcode: zipcode,
+            causes: req.query.causes,
+            legislators: legislatorsData
+          });
         });
     });
 }
