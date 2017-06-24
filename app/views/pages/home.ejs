@@ -14,7 +14,7 @@ HOMEPAGE
 
 <form action="/submit_home" method="get">
   <div class="right">
-    Zip code: <input type="text" name="zipcode">
+    Zip code: <input type="text" pattern="[0-9]{5}" name="zipcode" title="Five digit zip code" required>
   </div>
   <br>
 
@@ -23,9 +23,9 @@ HOMEPAGE
   </div>
 
   <div>
-  <select multiple class="causes" name="causes">
+  <select multiple class="causes" name="causes" required>
     <option>Reproductive Rights</option>
-    <option>Coptionmate Change</option>
+    <option>Climate Change</option>
     <option>Immigration Reform</option>
     <option>LGBTQ Rights</option>
     <option>Healthcare</option>
@@ -36,7 +36,7 @@ HOMEPAGE
     <option>Education</option>
     <option>Homelessness</option>
     <option>Women's Rights</option>
-    <option>Agriculture Pooptioncy</option>
+    <option>Agriculture Policy</option>
     <option>Finance Reform</option>
     <option>Middle Eastern Relations</option>
     <option>International Relations</option>
