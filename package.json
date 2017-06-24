@@ -1,0 +1,27 @@
+{
+  "name": "grievances",
+  "version": "0.0.1",
+  "description": "This app allows people to become more socially active..",
+  "main": "web.js",
+  "private": true,
+  "scripts": {
+    "start": "node server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kunalvsh/grievances.git"
+  },
+  "author": {
+    "kunalvsh": "https://github.com/kunalvsh/",
+    "vincenttian": "https://github.com/vincenttian"
+  },
+  "dependencies": {
+    "ejs": "*",
+    "express": "3.1.0",
+    "request": "2.36.0"
+  },
+  "engines": {
+    "node": "0.10.28"
+  }
+}
+
