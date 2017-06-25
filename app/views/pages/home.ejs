@@ -14,7 +14,7 @@ HOMEPAGE
 
 <form action="/submit_home" method="get">
   <div class="right zip">
-    Zip code: <input type="text" pattern="[0-9]{5}" name="zipcode" title="Five digit zip code" required>
+    Zip code: <input class="form-control" type="text" pattern="[0-9]{5}" name="zipcode" title="Five digit zip code" required>
   </div>
 
   <div class="choose">
@@ -43,7 +43,7 @@ HOMEPAGE
   </div>
 
   <div class="home-action">
-    <input id="joinRoom" type="submit" value="Go to your custom page." formaction="/submit_home">
+    <button type="button" class="btn btn-primary btn-lg" formaction="/submit_home">Grieve It</button>
   </div>
 </form>
 
