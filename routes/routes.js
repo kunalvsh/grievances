@@ -67,13 +67,46 @@ module.exports = function(app, io) {
                 var newsData = JSON.parse(body2);
                 var orgs = require("../data/orgs.json");
 
-                res.render('next', {
-                    zipcode: zipcode,
-                    causes: causes,
-                    localLegislators: localLegislators,
-                    newsArticles: newsData.response.docs,
-                    interestedOrgs: interestedOrgs,
-                    orgs: orgs
+                // Get bill data
+                var options = {
+                    url: 'https://api.propublica.org/congress/v1/bills/subjects/search.json?query=' + causes[0],
+                    headers: {
+                        'X-API-Key': 'USniIjzIyJ4G4VgI4Npsvae1ZWuWecjx1BeQ2Esm'
+                    }
+                };
+                request(options, function(error, response, body) {
+                    var data = JSON.parse(body);
+                    if (data.results[0].subjects.length > 0) {
+                        var options2 = {
+                            url: 'https://api.propublica.org/congress/v1/bills/subjects/' + data.results[0].subjects[0].url_name + '.json',
+                            headers: {
+                                'X-API-Key': 'USniIjzIyJ4G4VgI4Npsvae1ZWuWecjx1BeQ2Esm'
+                            }
+                        };
+                        request(options2, function(error, response, body) {
+                            var bills = JSON.parse(body).results;
+                            res.render('next', {
+                                zipcode: zipcode,
+                                causes: causes,
+                                localLegislators: localLegislators,
+                                newsArticles: newsData.response.docs,
+                                interestedOrgs: interestedOrgs,
+                                orgs: orgs,
+                                bills: bills
+                            });
+                        });
+                    } else {
+                        console.log('NO BILL DATA');
+                        res.render('next', {
+                            zipcode: zipcode,
+                            causes: causes,
+                            localLegislators: localLegislators,
+                            newsArticles: newsData.response.docs,
+                            interestedOrgs: interestedOrgs,
+                            orgs: orgs,
+                            bills: null
+                        });
+                    }
                 });
             });
         });

@@ -75,6 +75,22 @@
           <% } %>
             </tbody>
         </table>
+        <!-- Bills -->
+        <% if (bills) { %>
+            <% for(var i=0; i<bills.length; i++) {%>
+               <li>
+                  <a target="_blank" href=<%= bills[i].bill_uri %>><%= bills[i].title %></a>
+                  <br>
+                  Introduced date: <%= bills[i].introduced_date %>
+                  <br>
+                  Committees: <%= bills[i].committees %>
+                  <br>
+                  Last major action date: <%= bills[i].latest_major_action_date %>
+                  <br>
+                  Last major action: <%= bills[i].latest_major_action %>
+               </li>
+            <% } %>
+        <% } %>
         </div>
         <div class="tab-pane" id="3a">
             <h3>DO SOMETHING !!</h3>
