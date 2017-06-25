@@ -25,31 +25,18 @@
 <div id="exTab1" class="container">
     <ul  class="nav nav-pills">
         <li class="active">
-            <a  href="#1a" data-toggle="tab">News</a>
+            <a  href="#1a" data-toggle="tab">Legislators / Bills</a>
         </li>
         <li>
-            <a href="#2a" data-toggle="tab">Legislators / Bills</a>
+            <a href="#2a" data-toggle="tab">Things you can do</a>
         </li>
         <li>
-            <a href="#3a" data-toggle="tab">Things you can do</a>
+            <a href="#3a" data-toggle="tab">News</a>
         </li>
     </ul>
     <div class="tab-content clearfix">
         <div class="tab-pane active" id="1a">
-            <% for(var i=0; i<newsArticles.length; i++) {%>
-               <li>
-                    <a target="_blank" href=<%= newsArticles[i].web_url %>><%= newsArticles[i].headline.main %></a>
-                    <p>
-                        <%= newsArticles[i].snippet %>
-                        <% if (newsArticles[i].multimedia.length > 0) { %>
-                            <img src=<%='http://www.nytimes.com/' + newsArticles[i].multimedia[0].url %> >
-                        <% } %>
-                    </p>
-               </li>
-            <% } %>
-        </div>
-        <div class="tab-pane" id="2a">
-          <table class="table table-bordered table-hover">
+            <table class="table table-bordered table-hover">
             <caption class="caption-table">Your Legislators</caption>
             <thead>
               <tr>
@@ -108,46 +95,59 @@
           </tbody>
         </table>
         </div>
-        <div class="tab-pane" id="3a">
-            <h3>DO SOMETHING !!</h3>
-            Orgs to donate to based on chosen causes:
-            <table class="table table-bordered table-hover">
-              <thead>
-                <tr>
-                  <th>Organization</th>
-                  <th>Description</th>
-                  <th>Donate</th>
-                  <th>Cause</th>
-                </tr>
-              </thead>
-              <tbody>
-            <% for (var i=0; i<interestedOrgs.length; i++) {%>
-                <tr>
-                 <td>
-                   <%= orgs[interestedOrgs[i]].name %>
-                  </a>
-                </td>
-                <td><%= orgs[interestedOrgs[i]].description %></td>
-                <td>
-                  <button type="button" class="btn btn-success">
-                    <a style="color: #ffffff; text-decoration: none;" target='_blank' href=<%= orgs[interestedOrgs[i]].link %>>
-                      Donate
+        <div class="tab-pane" id="2a">
+          <h3>DO SOMETHING !!</h3>
+              Orgs to donate to based on chosen causes:
+              <table class="table table-bordered table-hover">
+                <thead>
+                  <tr>
+                    <th>Organization</th>
+                    <th>Description</th>
+                    <th>Donate</th>
+                    <th>Cause</th>
+                  </tr>
+                </thead>
+                <tbody>
+              <% for (var i=0; i<interestedOrgs.length; i++) {%>
+                  <tr>
+                   <td>
+                     <%= orgs[interestedOrgs[i]].name %>
                     </a>
-                  </button>
-                </td>
-                <td>
-                  <% for (var key in categories) {%>
-                    <% if (causes.indexOf(key) > -1 ) { %>
-                      <% if (categories[key].orgs.indexOf(interestedOrgs[i]) > -1) { %>
-                        <%= key %>
+                  </td>
+                  <td><%= orgs[interestedOrgs[i]].description %></td>
+                  <td>
+                    <button type="button" class="btn btn-success">
+                      <a style="color: #ffffff; text-decoration: none;" target='_blank' href=<%= orgs[interestedOrgs[i]].link %>>
+                        Donate
+                      </a>
+                    </button>
+                  </td>
+                  <td>
+                    <% for (var key in categories) {%>
+                      <% if (causes.indexOf(key) > -1 ) { %>
+                        <% if (categories[key].orgs.indexOf(interestedOrgs[i]) > -1) { %>
+                          <%= key %>
+                        <% } %>
                       <% } %>
                     <% } %>
-                  <% } %>
-                </td>
-                </tr>
-            <% } %>
-          </tbody>
-        </table>
+                  </td>
+                  </tr>
+              <% } %>
+            </tbody>
+          </table>
+        </div>
+        <div class="tab-pane" id="3a">
+          <% for(var i=0; i<newsArticles.length; i++) {%>
+             <li>
+                  <a target="_blank" href=<%= newsArticles[i].web_url %>><%= newsArticles[i].headline.main %></a>
+                  <p>
+                      <%= newsArticles[i].snippet %>
+                      <% if (newsArticles[i].multimedia.length > 0) { %>
+                          <img src=<%='http://www.nytimes.com/' + newsArticles[i].multimedia[0].url %> >
+                      <% } %>
+                  </p>
+             </li>
+          <% } %>
         </div>
     </div>
 </div>
