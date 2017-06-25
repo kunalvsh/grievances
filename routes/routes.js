@@ -18,7 +18,10 @@ module.exports = function(app, io) {
     });
 
 	app.get('/', function(req, res) {
-		res.render('home');
+        var categories = require("../data/categories.json");
+        res.render('home', {
+            categories: categories
+        });
 	});
 
     app.get('/submit_home', function(req, res) {

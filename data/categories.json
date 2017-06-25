@@ -1,5 +1,6 @@
 {
 	"reproductiveRights": {
+		"name": "Reproductive Rights",
 		"orgs": [
 			"plannedParenthood",
 			"naralProChoiceAmerica",
@@ -10,6 +11,7 @@
 		]
 	},
 	"climateChange": {
+		"name": "Climate Change",
 		"orgs": [
 			"sierraClub",
 			"americanCivilLibertiesUnion",
@@ -21,6 +23,7 @@
 		]
 	},
 	"immigrationReform": {
+		"name": "Immigration Reform",
 		"orgs": [
 			"councilOnAmericanIslamicRelations",
 			"internationRefugeeAssistanceProject",
@@ -33,6 +36,7 @@
 		]
 	},
 	"lgbtqRights": {
+		"name": "LGBTQ Rights",
 		"orgs": [
 			"americanCivilLibertiesUnion",
 			"humanRightsCampaign",
@@ -43,6 +47,7 @@
 		]
 	},
 	"healthcare": {
+		"name": "Healthcare",
 		"orgs": [
 			"plannedParenthood",
 			"internationalRescueCommittee",
@@ -54,6 +59,7 @@
 		]
 	},
 	"votingRights": {
+		"name": "Voting Rights",
 		"orgs": [
 			"americanCivilLibertiesUnion",
 			"naacp",
@@ -61,6 +67,7 @@
 		]
 	},
 	"racialJustice": {
+		"name": "Racial Justice",
 		"orgs": [
 			"americanCivilLibertiesUnion",
 			"antiDefamationLeague",
@@ -80,6 +87,7 @@
 		]
 	},
 	"islamophobia": {
+		"name": "Islamophobia",
 		"orgs": [
 			"councilOnAmericanIslamicRelations",
 			"americanCivilLibertiesUnion",
@@ -92,9 +100,11 @@
 		]
 	},
 	"campaignFinanceReform": {
+		"name": "Campaign Finance Reform",
 		"orgs": []
 	},
 	"education": {
+		"name": "Education",
 		"orgs": [
 			"naacp",
 			"dredf",
@@ -103,9 +113,11 @@
 		]
 	},
 	"homelessness": {
+		"name": "Homelessness",
 		"orgs": []
 	},
 	"womensRights": {
+		"name": "Women's Rights",
 		"orgs": [
 			"plannedParenthood",
 			"americanCivilLibertiesUnion",
@@ -126,16 +138,19 @@
 		]
 	},
 	"agriculturePolicy": {
+		"name": "Agriculture Policy",
 		"orgs": [
 			"oxfamInternational"
 		]
 	},
 	"financeReform": {
+		"name": "Finance Reform",
 		"orgs": [
 			"naacp"
 		]
 	},
 	"middleEasternRelations": {
+		"name": "Middle Eastern Relations",
 		"orgs": [
 			"councilOnAmericanIslamicRelations",
 			"internationRefugeeAssistanceProject",
@@ -148,6 +163,7 @@
 		]
 	},
 	"internationRelations": {
+		"name": "International Relations",
 		"orgs": [
 			"councilOnAmericanIslamicRelations",
 			"internationRefugeeAssistanceProject",
@@ -161,6 +177,7 @@
 		]
 	},
 	"freedomOfSpeech": {
+		"name": "Freedom of Speech",
 		"orgs": [
 			"committeeToProtectJournalists",
 			"proPublica",

@@ -23,22 +23,9 @@ HOMEPAGE
 
   <div class="causesList">
     <select multiple class="causes" name="causes" required>
-      <option>Reproductive Rights</option>
-      <option>Climate Change</option>
-      <option>Immigration Reform</option>
-      <option>LGBTQ Rights</option>
-      <option>Healthcare</option>
-      <option>Voting Rights</option>
-      <option>Racial Justice</option>
-      <option>Islamophobia</option>
-      <option>Campaign Finance Reform</option>
-      <option>Education</option>
-      <option>Homelessness</option>
-      <option>Women's Rights</option>
-      <option>Agriculture Policy</option>
-      <option>Finance Reform</option>
-      <option>Middle Eastern Relations</option>
-      <option>International Relations</option>
+      <% for(var key in categories) {%>
+         <option><%= categories[key].name %></option>
+      <% } %>
     </select>
   </div>
 
