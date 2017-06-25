@@ -41,6 +41,9 @@
                     <a target="_blank" href=<%= newsArticles[i].web_url %>><%= newsArticles[i].headline.main %></a>
                     <p>
                         <%= newsArticles[i].snippet %>
+                        <% if (newsArticles[i].multimedia.length > 0) { %>
+                            <img src=<%='http://www.nytimes.com/' + newsArticles[i].multimedia[0].url %> >
+                        <% } %>
                     </p>
                </li>
             <% } %>
