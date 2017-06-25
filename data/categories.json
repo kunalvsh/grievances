@@ -1,0 +1,170 @@
+{
+	"reproductiveRights": {
+		"orgs": [
+			"plannedParenthood",
+			"naralProChoiceAmerica",
+			"centerForReproductiveRights",
+			"emilysList",
+			"nationalWomensLawCenter",
+			"reproductiveHealthAccessProject"
+		]
+	},
+	"climateChange": {
+		"orgs": [
+			"americanCivilLibertiesUnion",
+			"nationalResourcesDefenseCouncil",
+			"greenpeace",
+			"earthJustice",
+			"nextGenClimateAction",
+			"unionOfConcernedScientists"
+		]
+	},
+	"immigrationReform": {
+		"orgs": [
+			"councilOnAmericanIslamicRelations",
+			"internationRefugeeAssistanceProject",
+			"mexicanAmericanLegalDefenseAndEducationalFund",
+			"southernPovertyLawCenter",
+			"nationalImmigrationLawCenter",
+			"borderAngels",
+			"chirla",
+			"youngCenterForImmigrantChildrensRights"
+		]
+	},
+	"lgbtqRights": {
+		"orgs": [
+			"americanCivilLibertiesUnion",
+			"humanRightsCampaign",
+			"trevorProject",
+			"southernPovertyLawCenter",
+			"lambdaLegal",
+			"sylviaRiveraLawProject"
+		]
+	},
+	"healthcare": {
+		"orgs": [
+			"plannedParenthood",
+			"internationalRescueCommittee",
+			"oxfamInternational",
+			"whiteHelmets",
+			"americanArabAntiDiscriminationCommittee",
+			"doctorsWithoutBorders",
+			"humanRightsCampaign"
+		]
+	},
+	"votingRights": {
+		"orgs": [
+			"americanCivilLibertiesUnion",
+			"naacp",
+			"naacpLegalDefenseAndEducationalFund"
+		]
+	},
+	"racialJustice": {
+		"orgs": [
+			"americanCivilLibertiesUnion",
+			"antiDefamationLeague",
+			"internationalRescueCommittee",
+			"americanArabAntiDiscriminationCommittee",
+			"mexicanAmericanLegalDefenseAndEducationalFund",
+			"naacp",
+			"humanRightsCampaign",
+			"southernPovertyLawCenter",
+			"naacpLegalDefenseAndEducationalFund",
+			"nationalImmigrationLawCenter",
+			"borderAngels",
+			"campaignZero",
+			"chirla",
+			"nativeAmericanRightsFund",
+			"youngCenterForImmigrantChildrensRights"
+		]
+	},
+	"islamophobia": {
+		"orgs": [
+			"councilOnAmericanIslamicRelations",
+			"americanCivilLibertiesUnion",
+			"internationRefugeeAssistanceProject",
+			"internationalRescueCommittee",
+			"americanArabAntiDiscriminationCommittee",
+			"unitedNationsHighCommissionerForRefugees",
+			"humanRightsCampaign",
+			"southernPovertyLawCenter"
+		]
+	},
+	"campaignFinanceReform": {
+		"orgs": []
+	},
+	"education": {
+		"orgs": [
+			"naacp",
+			"dredf",
+			"naacpLegalDefenseAndEducationalFund",
+			"boysAndGirlsClubsOfAmerica"
+		]
+	},
+	"homelessness": {
+		"orgs": []
+	},
+	"womensRights": {
+		"orgs": [
+			"plannedParenthood",
+			"americanCivilLibertiesUnion",
+			"oxfamInternational",
+			"americanArabAntiDiscriminationCommittee",
+			"doctorsWithoutBorders",
+			"humanRightsCampaign",
+			"naralProChoiceAmerica",
+			"sheShouldRun",
+			"centerForReproductiveRights",
+			"emilysList",
+			"ncadv",
+			"now",
+			"nationalWomensLawCenter",
+			"rainn",
+			"reproductiveHealthAccessProject",
+			"runningStart"
+		]
+	},
+	"agriculturePolicy": {
+		"orgs": [
+			"oxfamInternational"
+		]
+	},
+	"financeReform": {
+		"orgs": [
+			"naacp"
+		]
+	},
+	"middleEasternRelations": {
+		"orgs": [
+			"councilOnAmericanIslamicRelations",
+			"internationRefugeeAssistanceProject",
+			"antiDefamationLeague",
+			"internationalRescueCommittee",
+			"oxfamInternational",
+			"whiteHelmets",
+			"doctorsWithoutBorders",
+			"unitedNationsHighCommissionerForRefugees"
+		]
+	},
+	"internationRelations": {
+		"orgs": [
+			"councilOnAmericanIslamicRelations",
+			"internationRefugeeAssistanceProject",
+			"antiDefamationLeague",
+			"internationalRescueCommittee",
+			"oxfamInternational",
+			"whiteHelmets",
+			"doctorsWithoutBorders",
+			"unitedNationsHighCommissionerForRefugees",
+			"chirla"
+		]
+	},
+	"freedomOfSpeech": {
+		"orgs": [
+			"committeeToProtectJournalists",
+			"proPublica",
+			"penAmerica",
+			"reportersCommitteeForFreedomOfThePress"
+		]
+	}
+}
