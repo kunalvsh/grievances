@@ -16,13 +16,13 @@
     "vincenttian": "https://github.com/vincenttian"
   },
   "dependencies": {
+    "async": "^2.4.1",
+    "connect-flash": "*",
     "ejs": "*",
     "express": "3.1.0",
-    "request": "2.36.0",
-    "connect-flash": "*"
+    "request": "2.36.0"
   },
   "engines": {
     "node": "0.10.28"
   }
 }
-

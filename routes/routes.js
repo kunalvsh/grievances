@@ -1,5 +1,6 @@
 var categories = require("../data/categories.json"),
-    request = require('request');
+    request = require('request'),
+    async = require('async');
 
 module.exports = function(app, io) {
 
@@ -69,16 +70,20 @@ module.exports = function(app, io) {
                 var newsData = JSON.parse(body2);
                 var orgs = require("../data/orgs.json");
 
-                var billUrl = "https://congress.api.sunlightfoundation.com/bills/search"
-                billUrl += "?history.enacted=false&congress=115&searchscore%3E30&query=" + causes[0]
-
-                request(billUrl, function (error2, response2, body3) {
-                    if (error) {
-                        console.log('error:', error); // Print the error if one occurred
-                        res.redirect('/');
-                        // add error message here later
-                    }
-                    var bills = JSON.parse(body3).results;
+                async.concat(causes, function(cause, callback) {
+                    var billUrl = "https://congress.api.sunlightfoundation.com/bills/search"
+                    billUrl += "?history.enacted=false&congress=115&searchscore%3E30&query=" + cause
+                    request(billUrl, function (error2, response2, body3) {
+                        var bills = JSON.parse(body3).results;
+                        console.log('\n');
+                        console.log(cause);
+                        console.log(bills.length);
+                        callback(null, bills)
+                    });
+                }, function(err, result) {
+                    // if result is true then every file exists
+                    console.log('\n');
+                    console.log(result.length);
                     res.render('next', {
                         zipcode: zipcode,
                         causes: causes,
@@ -87,7 +92,7 @@ module.exports = function(app, io) {
                         interestedOrgs: interestedOrgs,
                         orgs: orgs,
                         categories: categories,
-                        bills: bills
+                        bills: result
                     });
                 });
             });

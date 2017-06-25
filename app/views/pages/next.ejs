@@ -94,7 +94,7 @@
                 <td>
                   <a
                     target="_blank"
-                    href=<%= bills[i].last_version.urls.pdf %>
+                    href=<%= bills[i].last_version && bills[i].last_version.urls.pdf %>
                   >
                     <%= bills[i].short_title || bills[i].official_title %>
                   </a>
