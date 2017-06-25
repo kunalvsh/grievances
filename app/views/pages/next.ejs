@@ -64,36 +64,38 @@
             </tbody>
         </table>
         <!-- Bills -->
-        <table class="table table-bordered table-hover">
-          <caption class="caption-table">Bills Related to the Causes</caption>
-          <thead>
-            <tr>
-              <th>Bill Title</th>
-              <th>Introduced on</th>
-              <th>Last Major Action On</th>
-              <th>Chamber</th>
-              <th>Description</th>
-            </tr>
-          </thead>
-          <tbody>
-            <% for(var i=0; i<bills.length; i++) {%>
+        <% for(var i=0; i<bills.length; i++) {%>
+          <table class="table table-bordered table-hover">
+            <caption class="caption-table"><%= causes[i] %></caption>
+            <thead>
               <tr>
-                <td>
-                  <a
-                    target="_blank"
-                    href=<%= bills[i].last_version && bills[i].last_version.urls.pdf %>
-                  >
-                    <%= bills[i].short_title || bills[i].official_title %>
-                  </a>
-                </td>
-                <td><%= bills[i].introduced_on %></td>
-                <td><%= bills[i].last_action_at %></td>
-                <td><%= bills[i].chamber %></td>
-                <td><%= bills[i].official_title %></td>
+                <th>Bill Title</th>
+                <th>Introduced on</th>
+                <th>Last Major Action On</th>
+                <th>Chamber</th>
+                <th>Description</th>
               </tr>
-            <% } %>
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              <% for(var j=0; j<bills[i].length; j++) {%>
+                <tr>
+                  <td>
+                    <a
+                      target="_blank"
+                      href=<%= bills[i][j].last_version && bills[i][j].last_version.urls.pdf %>
+                    >
+                      <%= bills[i][j].short_title || bills[i][j].official_title %>
+                    </a>
+                  </td>
+                  <td><%= bills[i][j].introduced_on %></td>
+                  <td><%= bills[i][j].last_action_at %></td>
+                  <td><%= bills[i][j].chamber %></td>
+                  <td><%= bills[i][j].official_title %></td>
+                </tr>
+              <% } %>
+            </tbody>
+          </table>
+        <% } %>
         </div>
         <div class="tab-pane" id="2a">
           <h3>DO SOMETHING !!</h3>
