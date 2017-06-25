@@ -77,31 +77,32 @@
             </tbody>
         </table>
         <!-- Bills -->
-        <% if (bills) { %>
-          <table class="table table-bordered table-hover">
-            <caption class="caption-table">Bills Related to the Causes</caption>
-            <thead>
+        <table class="table table-bordered table-hover">
+          <caption class="caption-table">Bills Related to the Causes</caption>
+          <thead>
+            <tr>
+              <th>Bill Title</th>
+              <th>Introduced On</th>
+              <th>Committee</th>
+              <th>Last Major Action On</th>
+              <th>Last Major Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Fill in bill data here for for loop, replace localLegislators with bills -->
+            <!--
+            <% for(var i=0; i<localLegislators.length; i++) {%>
               <tr>
-                <th>Bill Title</th>
-                <th>Introduced On</th>
-                <th>Committee</th>
-                <th>Last Major Action On</th>
-                <th>Last Major Action</th>
+                <td><a target="_blank" href=<%= localLegislators[i].bill_uri %>><%= localLegislators[i].title %></a></td>
+                <td><%= localLegislators[i].introduced_date %></td>
+                <td><%= localLegislators[i].committees %></td>
+                <td><%= localLegislators[i].latest_major_action_date %></td>
+                <td><%= localLegislators[i].latest_major_action %></td>
               </tr>
-            </thead>
-            <tbody>
-              <% for(var i=0; i<bills.length; i++) {%>
-                <tr>
-                  <td><a target="_blank" href=<%= bills[i].bill_uri %>><%= bills[i].title %></a></td>
-                  <td><%= bills[i].introduced_date %></td>
-                  <td><%= bills[i].committees %></td>
-                  <td><%= bills[i].latest_major_action_date %></td>
-                  <td><%= bills[i].latest_major_action %></td>
-                </tr>
-              <% } %>
-            </tbody>
-          </table>
-        <% } %>
+            <% } %>
+             -->
+          </tbody>
+        </table>
         </div>
         <div class="tab-pane" id="3a">
             <h3>DO SOMETHING !!</h3>
