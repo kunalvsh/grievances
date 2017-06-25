@@ -30,7 +30,8 @@ module.exports = function(app, io) {
         request('https://congress.api.sunlightfoundation.com/legislators/locate?zip=' + zipcode, function (error,
                                                                                                            response,
                                                                                                            body) {
-            if (error) {
+            var bodyData = JSON.parse(body);
+            if (error || bodyData.results.length == 0 || bodyData.count == 0) {
                 console.log('error:', error); // Print the error if one occurred
                 res.redirect('/');
                 // add error message here later
