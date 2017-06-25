@@ -94,7 +94,8 @@ module.exports = function(app, io) {
                                 newsArticles: newsData.response.docs,
                                 interestedOrgs: interestedOrgs,
                                 orgs: orgs,
-                                bills: bills
+                                bills: bills,
+                                categories: categories
                             });
                         });
                     } else {
@@ -106,7 +107,8 @@ module.exports = function(app, io) {
                             newsArticles: newsData.response.docs,
                             interestedOrgs: interestedOrgs,
                             orgs: orgs,
-                            bills: null
+                            bills: null,
+                            categories: categories
                         });
                     }
                 });
