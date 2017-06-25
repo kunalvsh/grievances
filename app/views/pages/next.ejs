@@ -78,6 +78,15 @@
         </div>
         <div class="tab-pane" id="3a">
             <h3>DO SOMETHING !!</h3>
+            Orgs to donate to based on chosen causes:
+            <% for(var i=0; i<interestedOrgs.length; i++) {%>
+               <li>
+                 <a target='_blank' href=<%= orgs[interestedOrgs[i]].link %>>
+                   <%= orgs[interestedOrgs[i]].name %>
+                 </a>
+               </li>
+               <%= orgs[interestedOrgs[i]].description %>
+            <% } %>
         </div>
     </div>
 </div>

@@ -24,7 +24,7 @@ HOMEPAGE
   <div class="causesList">
     <select multiple class="causes" name="causes" required>
       <% for(var key in categories) {%>
-         <option><%= categories[key].name %></option>
+         <option><%= key %></option>
       <% } %>
     </select>
   </div>

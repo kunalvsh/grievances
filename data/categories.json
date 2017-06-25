@@ -1,6 +1,5 @@
 {
-	"reproductiveRights": {
-		"name": "Reproductive Rights",
+	"Reproductive Rights": {
 		"orgs": [
 			"plannedParenthood",
 			"naralProChoiceAmerica",
@@ -10,8 +9,7 @@
 			"reproductiveHealthAccessProject"
 		]
 	},
-	"climateChange": {
-		"name": "Climate Change",
+	"Climate Change": {
 		"orgs": [
 			"sierraClub",
 			"americanCivilLibertiesUnion",
@@ -22,8 +20,7 @@
 			"unionOfConcernedScientists"
 		]
 	},
-	"immigrationReform": {
-		"name": "Immigration Reform",
+	"Immigration Reform": {
 		"orgs": [
 			"councilOnAmericanIslamicRelations",
 			"internationRefugeeAssistanceProject",
@@ -35,8 +32,7 @@
 			"youngCenterForImmigrationChildrensRights"
 		]
 	},
-	"lgbtqRights": {
-		"name": "LGBTQ Rights",
+	"LGBTQ Rights": {
 		"orgs": [
 			"americanCivilLibertiesUnion",
 			"humanRightsCampaign",
@@ -46,8 +42,7 @@
 			"sylviaRiveraLawProject"
 		]
 	},
-	"healthcare": {
-		"name": "Healthcare",
+	"Healthcare": {
 		"orgs": [
 			"plannedParenthood",
 			"internationalRescueCommittee",
@@ -58,16 +53,14 @@
 			"humanRightsCampaign"
 		]
 	},
-	"votingRights": {
-		"name": "Voting Rights",
+	"Voting Rights": {
 		"orgs": [
 			"americanCivilLibertiesUnion",
 			"naacp",
 			"naacpLegalDefenseAndEducationalFund"
 		]
 	},
-	"racialJustice": {
-		"name": "Racial Justice",
+	"Racial Justice": {
 		"orgs": [
 			"americanCivilLibertiesUnion",
 			"antiDefamationLeague",
@@ -86,8 +79,7 @@
 			"youngCenterForImmigrationChildrensRights"
 		]
 	},
-	"islamophobia": {
-		"name": "Islamophobia",
+	"Islamophobia": {
 		"orgs": [
 			"councilOnAmericanIslamicRelations",
 			"americanCivilLibertiesUnion",
@@ -99,12 +91,10 @@
 			"southernPovertyLawCenter"
 		]
 	},
-	"campaignFinanceReform": {
-		"name": "Campaign Finance Reform",
+	"Campaign Finance Reform": {
 		"orgs": []
 	},
-	"education": {
-		"name": "Education",
+	"Education": {
 		"orgs": [
 			"naacp",
 			"dredf",
@@ -112,12 +102,10 @@
 			"boysAndGirlsClubsOfAmerica"
 		]
 	},
-	"homelessness": {
-		"name": "Homelessness",
+	"Homelessness": {
 		"orgs": []
 	},
-	"womensRights": {
-		"name": "Women's Rights",
+	"Women's Rights": {
 		"orgs": [
 			"plannedParenthood",
 			"americanCivilLibertiesUnion",
@@ -137,20 +125,17 @@
 			"runningStart"
 		]
 	},
-	"agriculturePolicy": {
-		"name": "Agriculture Policy",
+	"Agriculture Policy": {
 		"orgs": [
 			"oxfamInternational"
 		]
 	},
-	"financeReform": {
-		"name": "Finance Reform",
+	"Finance Reform": {
 		"orgs": [
 			"naacp"
 		]
 	},
-	"middleEasternRelations": {
-		"name": "Middle Eastern Relations",
+	"Middle Eastern Relations": {
 		"orgs": [
 			"councilOnAmericanIslamicRelations",
 			"internationRefugeeAssistanceProject",
@@ -162,8 +147,7 @@
 			"unitedNationsHighCommissionerForRefugees"
 		]
 	},
-	"internationRelations": {
-		"name": "International Relations",
+	"International Relations": {
 		"orgs": [
 			"councilOnAmericanIslamicRelations",
 			"internationRefugeeAssistanceProject",
@@ -176,8 +160,7 @@
 			"chirla"
 		]
 	},
-	"freedomOfSpeech": {
-		"name": "Freedom of Speech",
+	"Freedom of Speech": {
 		"orgs": [
 			"committeeToProtectJournalists",
 			"proPublica",

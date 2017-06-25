@@ -1,4 +1,5 @@
-var request = require('request');
+var categories = require("../data/categories.json"),
+    request = require('request');
 
 module.exports = function(app, io) {
 
@@ -18,7 +19,6 @@ module.exports = function(app, io) {
     });
 
 	app.get('/', function(req, res) {
-        var categories = require("../data/categories.json");
         res.render('home', {
             categories: categories
         });
@@ -30,6 +30,15 @@ module.exports = function(app, io) {
         }
         var causes = req.query.causes;
         var zipcode = req.query.zipcode;
+
+        // Logic to get orgs to show from chosen causes.
+        var interestedOrgs = [];
+        for (var i =0; i < causes.length; i++) {
+            interestedOrgs = interestedOrgs.concat(categories[causes[i]].orgs);
+        }
+        // Only keep unique interestedOrgs
+        interestedOrgs = interestedOrgs.filter((x, i, a) => a.indexOf(x) == i)
+
         request('https://congress.api.sunlightfoundation.com/legislators/locate?zip=' + zipcode, function (error,
                                                                                                            response,
                                                                                                            body) {
@@ -54,11 +63,15 @@ module.exports = function(app, io) {
                     // add error message here later
                 }
                 var newsData = JSON.parse(body2);
+                var orgs = require("../data/orgs.json");
+
                 res.render('next', {
                     zipcode: zipcode,
                     causes: causes,
                     localLegislators: localLegislators,
-                    newsArticles: newsData.response.docs
+                    newsArticles: newsData.response.docs,
+                    interestedOrgs: interestedOrgs,
+                    orgs: orgs
                 });
             });
         });
