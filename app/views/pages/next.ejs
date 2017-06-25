@@ -49,7 +49,8 @@
             <% } %>
         </div>
         <div class="tab-pane" id="2a">
-          <table class="table table-bordered">
+          <table class="table table-bordered table-hover">
+            <caption class="caption-table">Your Legislators</caption>
             <thead>
               <tr>
                 <th>District No.</th>
@@ -69,7 +70,7 @@
                 (<%= localLegislators[i].party %>) (<%= localLegislators[i].chamber %>)</td>
               <td><a target='_blank' href=mailto:<%=localLegislators[i].oc_email%>><%= localLegislators[i].oc_email %></a></td>
               <td><%= localLegislators[i].phone %></td>
-              <td><a target='_blank' href='https://twitter.com/<%= localLegislators[i].twitter_id %>'><%= localLegislators[i].twitter_id %></a></td>
+              <td><a target='_blank' href='https://twitter.com/<%= localLegislators[i].twitter_id %>'>@<%= localLegislators[i].twitter_id %></a></td>
               <td><%= localLegislators[i].term_end %></td>
             </tr>
           <% } %>
@@ -77,25 +78,35 @@
         </table>
         <!-- Bills -->
         <% if (bills) { %>
-            <% for(var i=0; i<bills.length; i++) {%>
-               <li>
-                  <a target="_blank" href=<%= bills[i].bill_uri %>><%= bills[i].title %></a>
-                  <br>
-                  Introduced date: <%= bills[i].introduced_date %>
-                  <br>
-                  Committees: <%= bills[i].committees %>
-                  <br>
-                  Last major action date: <%= bills[i].latest_major_action_date %>
-                  <br>
-                  Last major action: <%= bills[i].latest_major_action %>
-               </li>
-            <% } %>
+          <table class="table table-bordered table-hover">
+            <caption class="caption-table">Bills Related to the Causes</caption>
+            <thead>
+              <tr>
+                <th>Bill Title</th>
+                <th>Introduced On</th>
+                <th>Committee</th>
+                <th>Last Major Action On</th>
+                <th>Last Major Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% for(var i=0; i<bills.length; i++) {%>
+                <tr>
+                  <td><a target="_blank" href=<%= bills[i].bill_uri %>><%= bills[i].title %></a></td>
+                  <td><%= bills[i].introduced_date %></td>
+                  <td><%= bills[i].committees %></td>
+                  <td><%= bills[i].latest_major_action_date %></td>
+                  <td><%= bills[i].latest_major_action %></td>
+                </tr>
+              <% } %>
+            </tbody>
+          </table>
         <% } %>
         </div>
         <div class="tab-pane" id="3a">
             <h3>DO SOMETHING !!</h3>
             Orgs to donate to based on chosen causes:
-            <table class="table table-bordered">
+            <table class="table table-bordered table-hover">
               <thead>
                 <tr>
                   <th>Organization</th>
