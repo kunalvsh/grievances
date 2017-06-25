@@ -1,8 +1,237 @@
 {
-	"reproductiveRights": {
-		"orgs": [
-		]
+	plannedParenthood: {
+		"name": "Planned Parenthood",
+		"link": "https://secure.ppaction.org/site/Donation2?df_id=24600&24600.donation=form1",
+		"description": "Planned Parenthood Federation of America is a nonprofit organization that provides sexual health care in the United States and globally."
 	},
-	"climateChange": {
+	councilOnAmericanIslamicRelations: {
+		"name": "Council on American-Islamic Relations (CAIR)",
+		"link": "https://www.cair.com/donations/general-donation/campaign/#/",
+		"description": "The Council on American–Islamic Relations is a Muslim civil rights and advocacy group. It is headquartered on Capitol Hill in Washington, D.C., with regional offices nationwide."
 	},
+	sierraClub: {
+		"name": "Sierra Club",
+		"link": "https://vault.sierraclub.org/ways-to-give/#donate-maintab",
+		"description": "he Sierra Club Foundation promotes climate solutions, conservation, and movement building through a powerful combination of strategic philanthropy and grassroots advocacy. The Foundation is the fiscal sponsor of Sierra Club’s charitable environmental programs."
+	},
+	americanCivilLibertiesUnion: {
+		"name": "American Civil Liberties Union (ACLU)",
+		"link": "https://action.aclu.org/donate-aclu?ms=web_horiz_nav_hp",
+		"description": "The American Civil Liberties Union (ACLU) is a nonpartisan, non-profit organization whose stated mission is 'to defend and preserve the individual rights and liberties guaranteed to every person in this country by the Constitution and laws of the United States.'"
+	},
+	nationalResourcesDefenseCouncil: {
+		"name": "National Resources Defense Council",
+		"link": "https://www.nrdc.org/get-involved",
+		"description": "The Natural Resources Defense Council (NRDC) is a New York City-based, non-profit international environmental advocacy group, with offices in New York City, Washington, D.C., San Francisco, Los Angeles, Chicago, Bozeman, Montana, and Beijing, China. Founded in 1970, NRDC today has 2.4 million members, online activities nationwide, and a staff of about 500 lawyers, scientists and other policy experts."
+	},
+	internationalRefugeeAssistanceProject: {
+		"name": "International Refugee Assistance Project",
+		"link": "https://refugeerights.org/donate/",
+		"description": "The International Refugee Assistance Project (IRAP) organizes law students and lawyers to develop and enforce a set of legal and human rights for refugees and displaced persons. Mobilizing direct legal aid and systemic policy advocacy, IRAP serves the world’s most persecuted individuals and empowers the next generation of human rights leaders."
+	},
+	antiDefamationLeague: {
+		"name": "The Anti-Defamation League (ADL)",
+		"link": "https://secure2.convio.net/adl/site/SPageNavigator/donate/MainDonation.html?_ga=2.220707096.1876128549.1498342443-850002412.1498342443",
+		"description": "The Anti-Defamation League (ADL) is acivil rights/human relations organization. They mobilize people to engage in reasonable discourse as together we find solutions to serve our diverse society."
+	},
+	internationalRescueCommittee: {
+		"name": "International Rescue Committee",
+		"link": "https://help.rescue.org/donate/tax-deductible-gift",
+		"description": "The International Rescue Committee helps people whose lives and livelihoods are shattered by conflict to survive, recover and gain control of their future"
+	},
+	oxfamInternational: {
+		"name": "Oxfam International",
+		"link": "https://www.oxfamamerica.org/donate/",
+		"description": "Oxfam is a global movement of people working together to end the injustice of poverty. With 70 years of experience in more than 90 countries, Oxfam takes on the big issues that keep people poor: inequality, discrimination, and unequal access to resources including food, water, and land. We help people save lives in disasters, build stronger futures for themselves, and hold the powerful accountable."
+	},
+	whiteHelmets: {
+		"name": "The White Helmets",
+		"link": "https://peoplesmillion.whitehelmets.org/act/peoples-million/?source=whweb",
+		"description": "When the bombs rain down, the White Helmets rush in. Unarmed and neutral they've saved 95024+ lives and counting. Support them now."
+	},
+	americanArabAntiDiscriminationCommittee: {
+		"name": "When the bombs rain down, the White Helmets rush in. Unarmed and neutral they've saved 95024+ lives and counting. Support them now.",
+		"link": "http://www.adc.org/take-action/action-alerts/",
+		"description": "ADC is a civil rights organization committed to defending the rights of people of Arab descent and promoting their rich cultural heritage."
+	},
+	doctorsWithoutBorders: {
+		"name": "Doctors Without Borders",
+		"link": "https://donate.doctorswithoutborders.org/onetime.cfm",
+		"description": "Doctors Without Borders help people worldwide where the need is greatest, delivering emergency medical aid to people affected by conflict, epidemics, disasters, or exclusion from health care."
+	},
+	unitedNationsHighCommissionerForRefugees: {
+		"name": "The United Nations High Commissioner for Refugees",
+		"link": "https://donate.unhcr.org/int-en/general/?set_country=INT",
+		"description": "The Office of the United Nations High Commissioner for Refugees (UNHCR), also known as the UN Refugee Agency, is a United Nations programme mandated to protect and support refugees at the request of a government or the UN itself and assists in their voluntary repatriation, local integration or resettlement to a third country."
+	},
+	committeeToProtectJournalists: {
+		"name": "The Committee to Protect Journalists",
+		"link": "https://cpj20023.thankyou4caring.org/",
+		"description": "The Committee to Protect Journalists is an American independent non-profit, non-governmental organization, based in New York City, New York with correspondents around the world. CPJ promotes press freedom and defends the rights of journalists."
+	},
+	mexicanAmericanLegalDefenseAndEducationFund: {
+		"name": "Mexican American Legal Defense and Educational Fund",
+		"link": "https://www.maldef.org/donations/",
+		"description": "The Mexican American Legal Defense and Educational Fund (MALDEF) is a national non-profit civil rights organization formed in 1968 to protect the rights of Latinos in the United States."
+	},
+	naacp: {
+		"name": "National Association For The Advancement of Colored People (NAACP)",
+		"link": "https://donate.naacp.org/page/contribute/make-a-contribution",
+		"description": "The mission of the National Association for the Advancement of Colored People (NAACP) is to ensure the political, educational, social, and economic equality of rights of all persons and to eliminate race-based discrimination."
+	},
+	humanRightsCampaign: {
+		"name": "Human Rights Campaign",
+		"link": "https://give.hrc.org/ea-action/action?ea.client.id=1954&ea.campaign.id=51848&ea.tracking.id=or_gnr_hrc_homepage_donate&_ga=2.48595045.274495941.1498342839-934409324.1498342839",
+		"description": "The Human Rights Campaign is the largest LGBT civil rights advocacy group and political lobbying organization in the United States."
+	},
+	trevorProject: {
+		"name": "The Trevor Project",
+		"link": "https://give.thetrevorproject.org/checkout/donation?eid=63307",
+		"description": "The Trevor Project is an American non-profit organization founded in 1998 focused on suicide prevention efforts among lesbian, gay, bisexual, transgender and questioning youth."
+	},
+	proPublica: {
+		"name": "ProPublica",
+		"link": "https://www.propublica.org/donate/",
+		"description": "ProPublica is an independent, nonprofit newsroom that produces investigative journalism in the public interest. Their work focuses exclusively on truly important stories, stories with “moral force.” They do this by producing journalism that shines a light on exploitation of the weak by the strong and on the failures of those with power to vindicate the trust placed in them."
+	},
+	southernPovertyLawCenter: {
+		"name": "Southern Poverty Law Center",
+		"link": "https://donate.splcenter.org/sslpage.aspx?pid=463",
+		"description": "The SPLC is dedicated to fighting hate and bigotry and to seeking justice for the most vulnerable members of our society. Using litigation, education, and other forms of advocacy, the SPLC works toward the day when the ideals of equal justice and equal opportunity will be a reality."
+	},
+	natalProChoiceAmerica: {
+		"name": "Naral Pro-Choice America",
+		"link": "https://secure.actblue.com/contribute/page/homepage_maindonate/?refcode=mainbutton",
+		"description": "The 1.2 million member activists of NARAL Pro-Choice America fight for reproductive freedom for every person in every state. They organize and mobilize to protect that freedom by fighting for access to abortion care, birth control, paid parental leave and protections from pregnancy discrimination."
+	},
+	sheShouldRun: {
+		"name": "She Should Run",
+		"link": "https://sheshouldrun.nationbuilder.com/donate",
+		"description": "Founded in 2011, She Should Run is a non-partisan 501(c)3 that provides an approachable starting place and network for women leaders considering a future run for office and for those who support them. Their mission is to expand the talent pool of women running for office in the United States by providing community, resources, and growth opportunities for aspiring political leaders. They believe that women of all political leanings, ethnicities, and backgrounds should have an equal opportunity to lead in elected office and that our democracy will benefit from the varied perspectives and experiences that women bring to leadership."
+	},
+	dredf: {
+		"name": "The Disability Education & Defense Fund (DREDF)",
+		"link": "https://dredf.org/support-our-work/",
+		"description": "Their mission is to advance the civil and human rights of people with disabilities through legal advocacy, training, education, and public policy and legislative development."
+	},
+	naacpLegalDefenseAndEducationalFund: {
+		"name": "NAACP Legal Defense and Educational Fund",
+		"link": "https://org2.salsalabs.com/o/6857/p/salsa/donation/common/public/?donate_page_KEY=11561",
+		"description": "The NAACP Legal Defense and Educational Fund, Inc. is America's premier legal organization fighting for racial justice. Through litigation, advocacy, and public education, LDF seeks structural changes to expand democracy, eliminate disparities, and achieve racial justice in a society that fulfills the promise of equality for all Americans. LDF also defends the gains and protections won over the past 75 years of civil rights struggle and works to improve the quality and diversity of judicial and executive appointments."
+	},
+	nationalImmigrationLawCenter: {
+		"name": "National Immigration Law Center",
+		"link": "https://www.nilc.org/get-involved/donate/",
+		"description": "The National Immigration Law Center (NILC) is one of the leading organizations in the U.S. exclusively dedicated to defending and advancing the rights of immigrants with low income."
+	},
+	centerForReproductiveRights: {
+		"name": "The Center for Reproductive Rights",
+		"link": "https://secure3.convio.net/cfrr/site/Donation2?df_id=4620&4620.donation=form1&s_src=webnav&s_subsrc=datasync&_ga=2.164616319.1976654940.1498343613-1469926608.1498343613",
+		"description": "The Center for Reproductive Rights is a global legal advocacy organization that seeks to advance reproductive rights."
+	},
+	greenpeace: {
+		"name": "Greenpeace",
+		"link": "https://engage.us.greenpeace.org/onlineactions/0jG1Em7WkE23UNWhT4ofUg2?&utm_source=website&utm_medium=homeage&utm_campaign=170616_header_test&am=15&r=true",
+		"description": "Greenpeace is a non-governmental environmental organization with offices in over 40 countries and with an international coordinating body in Amsterdam, the Netherlands."
+	},
+	borderAngels: {
+		"name": "Border Angels",
+		"link": "http://www.borderangels.org/",
+		"description": "Border Angels is a San Diego-based 501 tax-exempt nonprofit charitable organization that is focused on migrant rights, immigration reform, and the prevention of immigrant deaths along the border."
+	},
+	boysAndGirlsClubsOfAmerica: {
+		"name": "Boys & Girls Clubs of America",
+		"link": "https://donate.bgca.org/site/Donation2?df_id=9309&9309.donation=form1&mfc_pref=T&_ga=2.266000519.925122026.1498343733-173598653.1498343733",
+		"description": "Boys & Girls Clubs of America is a national organization of local chapters which provide after-school programs for young people."
+	},
+	campaignZero: {
+		"name": "Campaign Zero",
+		"link": "https://www.paypal.com/donate/?token=A9QD02SEgyqQzhNpS6chQp2RhJjGOHkZ71B6b0fP0TZr11Wu-ppjZU-bNjVU6Je0g9T8RG",
+		"description": "Campaign Zero is a police reform campaign proposed by activists associated with Black Lives Matter."
+	},
+	chirla: {
+		"name": "Coalition for Humane Immigrant Rights of Los Angeles (CHIRLA)",
+		"link": "https://connect.clickandpledge.com/w/Form/f934d29c-00d6-4e88-aa2e-d29172364494",
+		"description": "The Coalition for Humane Immigrant Rights of Los Angeles organizes and serves individuals, institutions and coalitions to build power, transform public opinion, and change policies to achieve full human, civil and labor rights."
+	},
+	earthJustice: {
+		"name": "EarthJustice",
+		"link": "https://secure.earthjustice.org/site/Donation2?df_id=10960&10960.donation=form1&_ga=2.157160187.111404477.1498343825-773221764.1498343825",
+		"description": "Earthjustice is a non-profit public interest law organization based in the United States dedicated to environmental issues."
+	},
+	emilysList: {
+		"name": "EMILY'S List",
+		"link": "http://www.emilyslist.org/pages/entry/support-emilys-list",
+		"description": "EMILY's List is an American political action committee (PAC) that aims to help elect pro-choice Democratic female candidates to office."
+	},
+	lambdaLegal: {
+		"name": "Lambda Legal",
+		"link": "https://www.lambdalegal.org/donate",
+		"description": "Lambda Legal (Lambda Legal Defense and Education Fund) is an American civil rights organization that focuses on lesbian, gay, bisexual, and transgender (LGBT) communities as well as people living with HIV/AIDS (PWAs) through impact litigation, societal education, and public policy work."
+	},
+	ncadv: {
+		"name": "The National Coalition Against Domestic Violence (NCADV)",
+		"link": "http://www.ncadv.org/give-back/donate",
+		"description": "National Coalition Against Domestic Violence focuses on domestic violence in the home, society-wide violence, and factors that perpetuate violence against women and children."
+	},
+	now: {
+		"name": "National Organization for Women (NOW)",
+		"link": "https://salsa.wiredforchange.com/o/5996/p/salsa/donation/common/public/?donate_page_KEY=11132",
+		"description": "The National Organization for Women (NOW) is an American feminist organization founded in 1966. The six core issues that NOW addresses are abortion and reproductive health services access, violence against women, constitutional equality, promoting diversity/ending racism, lesbian rights, and economic justice, with these issues having various sub-issues."
+	},
+	nationalWomensLawsCenter: {
+		"name": "National Women's Law Center",
+		"link": "https://act.nwlc.org/onlineactions/tpGjcHGp80-2Ofx5k3jJ2A2",
+		"description": "The National Women's Law Center advocates for women's rights through litigation and policy initiatives."
+	},
+	nativeAmericanRightsFund: {
+		"name": "Native American Rights Fund",
+		"link": "https://secure2.convio.net/narf/site/Donation2;jsessionid=00000000.app273a?idb=2078295640&DONATION_LEVEL_ID_SELECTED=1&df_id=1641&1641.donation=form1&mfc_pref=T&NONCE_TOKEN=D78A70AAF307F5CD2D852CB6284B0A2E&idb=0",
+		"description": "Founded in 1970, the Native American Rights Fund (NARF) is the oldest and largest nonprofit law firm dedicated to asserting and defending the rights of Indian tribes, organizations and individuals nationwide."
+	},
+	nextGenClimateAction: {
+		"name": "NextGen Climate Action",
+		"link": "https://nextgenclimate.org/donate/contribute-to-nextgen-climate-action/",
+		"description": "NextGen Climate acts politically to prevent climate disaster and promote prosperity for every American."
+	},
+	penAmerica: {
+		"name": "PEN America",
+		"link": "https://pen.org/donate/",
+		"description": "PEN America Center works to advance literature, defend free expression, and foster international literary fellowship. As of 2016, the name was shortened to PEN America."
+	},
+	rainn: {
+		"name": "Rape, Abuse & Incest National Network (RAINN)",
+		"link": "https://donate.rainn.org/",
+		"description": "The Rape, Abuse & Incest National Network (RAINN) is an American anti-sexual assault organization."
+	},
+	reportersCommitteeForFreedomOfThePress: {
+		"name": "Reporters Committee for Freedom of the Press",
+		"link": "https://donatenow.networkforgood.org/reporterscommittee?code=Website",
+		"description": "The Reporters Committee for Freedom of the Press is an American nonprofit organization that provides free legal assistance to and on behalf of journalists."
+	},
+	reproductiveHealthAccessProject: {
+		"name": "Reproductive Health Access Project",
+		"link": "https://donatenow.networkforgood.org/1438163",
+		"description": "The Reproductive Health Access Project (RHAP) trains and supports clinicians to make abortion, contraception, and miscarriage care accessible to everyone."
+	},
+	runningStart: {
+		"name": "Running Start",
+		"link": "http://runningstartonline.org/contribute",
+		"description": "Running Start programs in Washington and Hawaii allow high school juniors and seniors to attend college courses numbered 100 or above, while completing high school."
+	},
+	sylviaRiveraLawProject: {
+		"name": "The Sylvia Rivera Law Project",
+		"link": "https://srlp.org/srlp/?page=CiviCRM&q=civicrm/contribute/transact&reset=1&id=4",
+		"description": "The Sylvia Rivera Law Project works to guarantee that all people are free to self-determine gender identity and expression, regardless of income or race, and without facing harassment, discrimination or violence."
+	},
+	unionOfConcernedScientists: {
+		"name": "Union of Concerned Scientists",
+		"link": "https://secure.ucsusa.org/onlineactions/dR5QqmX2uUCLCFD1KkVEzg2?MS=topnav&_ga=2.83414612.352110590.1498344269-1659890056.1498344269",
+		"description": "The Union of Concerned Scientists is a nonprofit science advocacy organization based in the United States."
+	},
+	youngCenterForImmigrationChildrensRights: {
+		"name": "The Young Center for Immigrant Children's Rights",
+		"link": "https://donatenow.networkforgood.org/TheYoungCenter",
+		"description": "The mission of the Young Center for Immigrant Children’s Rights is to promote the best interests of unaccompanied immigrant children with due regard to the child’s expressed wishes, according to the Convention on the Rights of the Child and state and federal law."
+	}
 }
