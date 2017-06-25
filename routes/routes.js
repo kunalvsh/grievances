@@ -37,7 +37,9 @@ module.exports = function(app, io) {
             interestedOrgs = interestedOrgs.concat(categories[causes[i]].orgs);
         }
         // Only keep unique interestedOrgs
-        interestedOrgs = interestedOrgs.filter((x, i, a) => a.indexOf(x) == i)
+        interestedOrgs = interestedOrgs.filter(function (x, i, a) {
+            return a.indexOf(x) == i;
+        });
 
         request('https://congress.api.sunlightfoundation.com/legislators/locate?zip=' + zipcode, function (error,
                                                                                                            response,
