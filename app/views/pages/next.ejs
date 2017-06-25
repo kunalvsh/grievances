@@ -7,20 +7,20 @@
   <link rel="stylesheet"  href="css/style.css" />
 </head>
 <body>
-<div class="title">
-Next
+<div class="title"> Your Custom Page </div>
 
-<br><br>
-Zipcode:
-<%= zipcode %>
-<br><br>
+<div class="settings">
+    <br>
+    Zipcode:
+    <%= zipcode %>
+    <br>
+    Causes
+    <% for(var i=0; i<causes.length; i++) {%>
+       <li><%= causes[i] %></li>
+    <% } %>
+</div>
 
-<br><hr><br>
-
-Causes
-<% for(var i=0; i<causes.length; i++) {%>
-   <li><%= causes[i] %></li>
-<% } %>
+<hr>
 
 <div id="exTab1" class="container">
     <ul  class="nav nav-pills">
