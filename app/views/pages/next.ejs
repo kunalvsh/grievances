@@ -82,25 +82,29 @@
           <thead>
             <tr>
               <th>Bill Title</th>
-              <th>Introduced On</th>
-              <th>Committee</th>
+              <th>Introduced on</th>
               <th>Last Major Action On</th>
-              <th>Last Major Action</th>
+              <th>Chamber</th>
+              <th>Description</th>
             </tr>
           </thead>
           <tbody>
-            <!-- Fill in bill data here for for loop, replace localLegislators with bills -->
-            <!--
-            <% for(var i=0; i<localLegislators.length; i++) {%>
+            <% for(var i=0; i<bills.length; i++) {%>
               <tr>
-                <td><a target="_blank" href=<%= localLegislators[i].bill_uri %>><%= localLegislators[i].title %></a></td>
-                <td><%= localLegislators[i].introduced_date %></td>
-                <td><%= localLegislators[i].committees %></td>
-                <td><%= localLegislators[i].latest_major_action_date %></td>
-                <td><%= localLegislators[i].latest_major_action %></td>
+                <td>
+                  <a
+                    target="_blank"
+                    href=<%= bills[i].last_version.urls.pdf %>
+                  >
+                    <%= bills[i].short_title || bills[i].official_title %>
+                  </a>
+                </td>
+                <td><%= bills[i].introduced_on %></td>
+                <td><%= bills[i].last_action_at %></td>
+                <td><%= bills[i].chamber %></td>
+                <td><%= bills[i].official_title %></td>
               </tr>
             <% } %>
-             -->
           </tbody>
         </table>
         </div>

@@ -68,14 +68,27 @@ module.exports = function(app, io) {
                 }
                 var newsData = JSON.parse(body2);
                 var orgs = require("../data/orgs.json");
-                res.render('next', {
-                    zipcode: zipcode,
-                    causes: causes,
-                    localLegislators: localLegislators,
-                    newsArticles: newsData.response.docs,
-                    interestedOrgs: interestedOrgs,
-                    orgs: orgs,
-                    categories: categories
+
+                var billUrl = "https://congress.api.sunlightfoundation.com/bills/search"
+                billUrl += "?history.enacted=false&congress=115&searchscore%3E30&query=" + causes[0]
+
+                request(billUrl, function (error2, response2, body3) {
+                    if (error) {
+                        console.log('error:', error); // Print the error if one occurred
+                        res.redirect('/');
+                        // add error message here later
+                    }
+                    var bills = JSON.parse(body3).results;
+                    res.render('next', {
+                        zipcode: zipcode,
+                        causes: causes,
+                        localLegislators: localLegislators,
+                        newsArticles: newsData.response.docs,
+                        interestedOrgs: interestedOrgs,
+                        orgs: orgs,
+                        categories: categories,
+                        bills: bills
+                    });
                 });
             });
         });
