@@ -78,7 +78,7 @@ module.exports = function(app, io) {
                 };
                 request(options, function(error, response, body) {
                     var data = JSON.parse(body);
-                    if (data.results[0].subjects.length > 0) {
+                    if (data && data.results && data.results[0].subjects.length > 0) {
                         var options2 = {
                             url: 'https://api.propublica.org/congress/v1/bills/subjects/' + data.results[0].subjects[0].url_name + '.json',
                             headers: {
