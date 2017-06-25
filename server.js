@@ -6,6 +6,8 @@ var express = require('express'),
     server = require('http').createServer(app),
     port = process.env.PORT || 3000;
 
+var flash = require('connect-flash');
+
 server.listen(port, function() {
     console.log('Server listening at port %d', port);
 });
@@ -18,6 +20,7 @@ app.configure(function() {
     app.use(express.cookieSession({
         secret: 'secret'
     }));
+    app.use(flash());
     app.use(express.bodyParser());
     app.use(express.methodOverride());
     app.use(app.router);

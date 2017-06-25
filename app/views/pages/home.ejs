@@ -17,6 +17,12 @@ HOMEPAGE
     Zip code: <input class="form-control" type="text" pattern="[0-9]{5}" name="zipcode" title="Five digit zip code" required>
   </div>
 
+  <% if (message) { %>
+    <% if (message.error) { %>
+      <div class="errorMessage"><em><%= message.error %></em></div>
+    <% } %>
+  <% } %><br>
+
   <div class="choose">
     Choose 3-5
   </div>

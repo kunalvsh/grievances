@@ -18,7 +18,8 @@
   "dependencies": {
     "ejs": "*",
     "express": "3.1.0",
-    "request": "2.36.0"
+    "request": "2.36.0",
+    "connect-flash": "*"
   },
   "engines": {
     "node": "0.10.28"

@@ -20,7 +20,8 @@ module.exports = function(app, io) {
 
 	app.get('/', function(req, res) {
         res.render('home', {
-            categories: categories
+            categories: categories,
+            message: req.flash()
         });
 	});
 
@@ -47,6 +48,7 @@ module.exports = function(app, io) {
             var bodyData = JSON.parse(body);
             if (error || bodyData.results.length == 0 || bodyData.count == 0) {
                 console.log('error:', error); // Print the error if one occurred
+                req.flash('error', zipcode + " is not a valid US zipcode.")
                 res.redirect('/');
                 // add error message here later
             }
