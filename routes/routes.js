@@ -33,6 +33,11 @@ module.exports = function(app, io) {
         var causes = req.query.causes;
         var zipcode = req.query.zipcode;
 
+        if (causes.length  > 5) {
+            req.flash('error', "You can only choose up to 5 causes");
+            res.redirect('/');
+        }
+
         // Logic to get orgs to show from chosen causes.
         var interestedOrgs = [];
         for (var i =0; i < causes.length; i++) {
