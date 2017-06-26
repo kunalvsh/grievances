@@ -78,21 +78,25 @@ module.exports = function(app, io) {
                 async.map(causes, function(cause, callback) {
                     var billUrl = "https://congress.api.sunlightfoundation.com/bills/search"
                     billUrl += "?history.enacted=false&congress=115&searchscore%3E30&query=" + cause
-                    request(billUrl, function (error2, response2, body3) {
+                    request(billUrl, function (error3, response3, body3) {
                         var bills = JSON.parse(body3).results;
                         callback(null, bills)
                     });
                 }, function(err, result) {
-                    // if result is true then every file exists
-                    res.render('next', {
-                        zipcode: zipcode,
-                        causes: causes,
-                        localLegislators: localLegislators,
-                        newsArticles: newsData.response.docs,
-                        interestedOrgs: interestedOrgs,
-                        orgs: orgs,
-                        categories: categories,
-                        bills: result
+
+                    request("http://maps.googleapis.com/maps/api/geocode/json?address=" + zipcode, function (error4, response4, body4) {
+                        var zipcodeData = JSON.parse(body4).results[0];
+                        res.render('next', {
+                            zipcode: zipcode,
+                            causes: causes,
+                            localLegislators: localLegislators,
+                            newsArticles: newsData.response.docs,
+                            interestedOrgs: interestedOrgs,
+                            orgs: orgs,
+                            categories: categories,
+                            bills: result,
+                            placeData: zipcodeData
+                        });
                     });
                 });
             });
