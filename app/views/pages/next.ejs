@@ -93,15 +93,15 @@
                       <td>
                         <a
                           target="_blank"
-                          href=<%= bills[0][0].last_version && bills[0][0].last_version.urls.pdf %>
+                          href=<%= bills[0][0] && bills[0][0].last_version && bills[0][0].last_version.urls.pdf %>
                         >
-                          <%= bills[0][0].short_title || bills[0][0].official_title %>
+                          <%= bills[0][0] && (bills[0][0].short_title || bills[0][0].official_title) %>
                         </a>
                       </td>
-                      <td><%= bills[0][0].introduced_on %></td>
-                      <td><%= bills[0][0].last_action_at %></td>
-                      <td><%= bills[0][0].chamber %></td>
-                      <td><%= bills[0][0].official_title %></td>
+                      <td><%= bills[0][0] && bills[0][0].introduced_on %></td>
+                      <td><%= bills[0][0] && bills[0][0].last_action_at %></td>
+                      <td><%= bills[0][0] && bills[0][0].chamber %></td>
+                      <td><%= bills[0][0] && bills[0][0].official_title %></td>
                     </tr>
                 </tbody>
               </table>
