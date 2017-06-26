@@ -48,54 +48,100 @@
                 <th>Term End</th>
               </tr>
             </thead>
-            <tbody>
-          <% for(var i=0; i<localLegislators.length; i++) {%>
-            <tr>
-              <td><%= localLegislators[i].district %></td>
-               <td><a target='_blank' href=<%= localLegislators[i].website %>>
-                <%= localLegislators[i].title %>. <%= localLegislators[i].first_name %> <%= localLegislators[i].last_name %></a>
-                (<%= localLegislators[i].party %>) (<%= localLegislators[i].chamber %>)</td>
-              <td><a target='_blank' href=mailto:<%=localLegislators[i].oc_email%>><%= localLegislators[i].oc_email %></a></td>
-              <td><%= localLegislators[i].phone %></td>
-              <td><a target='_blank' href='https://twitter.com/<%= localLegislators[i].twitter_id %>'>@<%= localLegislators[i].twitter_id %></a></td>
-              <td><%= localLegislators[i].term_end %></td>
-            </tr>
-          <% } %>
-            </tbody>
-        </table>
+              <tbody>
+                <% for(var i=0; i<localLegislators.length; i++) {%>
+                  <tr>
+                    <td><%= localLegislators[i].district %></td>
+                     <td><a target='_blank' href=<%= localLegislators[i].website %>>
+                      <%= localLegislators[i].title %>. <%= localLegislators[i].first_name %> <%= localLegislators[i].last_name %></a>
+                      (<%= localLegislators[i].party %>) (<%= localLegislators[i].chamber %>)</td>
+                    <td><a target='_blank' href=mailto:<%=localLegislators[i].oc_email%>><%= localLegislators[i].oc_email %></a></td>
+                    <td><%= localLegislators[i].phone %></td>
+                    <td><a target='_blank' href='https://twitter.com/<%= localLegislators[i].twitter_id %>'>@<%= localLegislators[i].twitter_id %></a></td>
+                    <td><%= localLegislators[i].term_end %></td>
+                  </tr>
+                <% } %>
+              </tbody>
+            </table>
         <!-- Bills -->
-        <% for(var i=0; i<bills.length; i++) {%>
-          <table class="table table-bordered table-hover">
-            <caption class="caption-table"><%= causes[i] %></caption>
-            <thead>
-              <tr>
-                <th>Bill Title</th>
-                <th>Introduced on</th>
-                <th>Last Major Action On</th>
-                <th>Chamber</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              <% for(var j=0; j<bills[i].length; j++) {%>
-                <tr>
-                  <td>
-                    <a
-                      target="_blank"
-                      href=<%= bills[i][j].last_version && bills[i][j].last_version.urls.pdf %>
-                    >
-                      <%= bills[i][j].short_title || bills[i][j].official_title %>
-                    </a>
-                  </td>
-                  <td><%= bills[i][j].introduced_on %></td>
-                  <td><%= bills[i][j].last_action_at %></td>
-                  <td><%= bills[i][j].chamber %></td>
-                  <td><%= bills[i][j].official_title %></td>
-                </tr>
+        <div class="container" id="exTab2">
+          <ul  class="nav nav-pills">
+              <li class="active">
+                  <a href="#causes0b" data-toggle="tab"><%= causes[0] %></a>
+              </li>
+              <% for(var i=1; i<causes.length; i++) { %>
+                <li>
+                    <a href="#causes<%= i %>b" data-toggle="tab"><%= causes[i] %></a>
+                </li>
               <% } %>
-            </tbody>
-          </table>
-        <% } %>
+          </ul>
+          <div class="tab-content clearfix">
+            <div class="tab-pane active" id="causes0b">
+              <table class="table table-bordered table-hover">
+                <caption class="caption-table"><%= causes[0] %></caption>
+                <thead>
+                  <tr>
+                    <th>Bill Title</th>
+                    <th>Introduced on</th>
+                    <th>Last Major Action On</th>
+                    <th>Chamber</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                      <td>
+                        <a
+                          target="_blank"
+                          href=<%= bills[0][0].last_version && bills[0][0].last_version.urls.pdf %>
+                        >
+                          <%= bills[0][0].short_title || bills[0][0].official_title %>
+                        </a>
+                      </td>
+                      <td><%= bills[0][0].introduced_on %></td>
+                      <td><%= bills[0][0].last_action_at %></td>
+                      <td><%= bills[0][0].chamber %></td>
+                      <td><%= bills[0][0].official_title %></td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+            <% for(var i=1; i<bills.length; i++) {%>
+              <div class="tab-pane" id="causes<%= i %>b">
+                <table class="table table-bordered table-hover">
+                  <caption class="caption-table"><%= causes[i] %></caption>
+                  <thead>
+                    <tr>
+                      <th>Bill Title</th>
+                      <th>Introduced on</th>
+                      <th>Last Major Action On</th>
+                      <th>Chamber</th>
+                      <th>Description</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <% for(var j=1; j<bills[i].length; j++) {%>
+                      <tr>
+                        <td>
+                          <a
+                            target="_blank"
+                            href=<%= bills[i][j].last_version && bills[i][j].last_version.urls.pdf %>
+                          >
+                            <%= bills[i][j].short_title || bills[i][j].official_title %>
+                          </a>
+                        </td>
+                        <td><%= bills[i][j].introduced_on %></td>
+                        <td><%= bills[i][j].last_action_at %></td>
+                        <td><%= bills[i][j].chamber %></td>
+                        <td><%= bills[i][j].official_title %></td>
+                      </tr>
+                    <% } %>
+                  </tbody>
+                </table>
+              </div>
+            <% } %>
+            </div>
+          </div>
         </div>
         <div class="tab-pane" id="2a">
           <h3>DO SOMETHING !!</h3>
